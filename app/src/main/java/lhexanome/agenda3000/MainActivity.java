@@ -2,9 +2,13 @@ package lhexanome.agenda3000;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.BottomNavigationView;
+import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.view.MotionEvent;
+import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -30,7 +34,22 @@ public class MainActivity extends AppCompatActivity {
             return false;
         }
     };
+    private AppBarLayout.OnTouchListener mOnTouchBarListener= new View.OnTouchListener() {
+        @Override
+        public boolean onTouch(View view, MotionEvent motionEvent) {
+            AppBarLayout appBar = (AppBarLayout)view;
+            boolean fullyExpanded =
+                    (appBar.getHeight() - appBar.getBottom()) == 0;
+            if(!fullyExpanded) {
+                appBar.setExpanded(true, true);
+            }else{
+                appBar.setExpanded(false, true);
 
+            }
+
+            return false;
+        }
+    };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

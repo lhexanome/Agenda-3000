@@ -1,11 +1,14 @@
 package lhexanome.agenda3000;
 
 import android.os.Bundle;
+import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.BottomSheetBehavior;
+import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.widget.LinearLayout;
 
 import com.alamkanak.weekview.MonthLoader;
@@ -38,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
         bottomSheetBehavior.setState(BottomSheetBehavior.STATE_SETTLING);
         bottomSheetBehavior.setPeekHeight(getResources().getDimensionPixelSize(R.dimen.bottom_sheet_peekable_height));
+
     }
 
     @Override

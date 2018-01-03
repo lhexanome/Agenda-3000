@@ -4,24 +4,22 @@
     android:id="@+id/bottom_sheet"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/darker_gray"
+    android:background="@android:color/white"
+    android:elevation="16dp"
     android:orientation="vertical"
     app:layout_behavior="@string/bottom_sheet_behavior">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="@dimen/bottom_sheet_peekable_height"
-        android:background="@color/colorAccent"
         android:gravity="center"
-        android:text="@string/bottom_sheet_peek"
-        android:textColor="@android:color/white" />
+        android:text="@string/bottom_sheet_peek" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:text="@string/bottom_sheet_content"
-        android:textColor="@android:color/white" />
+        android:text="@string/bottom_sheet_content" />
 
 
 </LinearLayout>

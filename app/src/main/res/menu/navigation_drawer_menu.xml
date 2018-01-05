@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group>
+        <item android:title="@string/week_view_button" />
+    </group>
+    <group>
+        <item android:checkable="true"
+            android:title="@string/notifications_button" />
+    </group>
+</menu>

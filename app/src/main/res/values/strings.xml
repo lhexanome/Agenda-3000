@@ -6,4 +6,13 @@
     <string name="bottom_sheet_peek">Peek me !</string>
     <string name="bottom_sheet_content">Some info about me</string>
     <string name="title_today">Today</string>
+    <string name="event_name">Réseau</string>
+    <string name="event_location">Amphi Gaston Berger</string>
+    <string name="event_start">8h00</string>
+    <string name="bottom_sheet_title">Prochain evenement</string>
+    <string name="drawer_open">Agenda\'s drawer</string>
+    <string name="drawer_close">Agenda 3000</string>
+    <string name="week_title">Week</string>
+    <string name="week_view_button">Vue semaine</string>
+    <string name="notifications_button">Notifications</string>
 </resources>

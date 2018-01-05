@@ -3,4 +3,6 @@
     <string name="app_name">Agenda 3000</string>
     <string name="title_home">Accueil</string>
     <string name="title_today">Aujourd\'hui</string>
+    <string name="week_title">Semaine</string>
+    <string name="notifications_button">Notifications</string>
 </resources>

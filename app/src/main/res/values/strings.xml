@@ -15,4 +15,8 @@
     <string name="week_title">Week</string>
     <string name="week_view_button">Vue semaine</string>
     <string name="notifications_button">Notifications</string>
+    <string name="event_channel_name">Events</string>
+    <string name="event_channel_description">Event channel description</string>
+    <string name="snooze">Snooze %d min</string>
+    <string name="event_snoozed">The event was snoozed</string>
 </resources>

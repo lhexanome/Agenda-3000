@@ -1,6 +1,8 @@
 package lhexanome.agenda3000;
 
 import android.content.res.Configuration;
+import android.graphics.Color;
+import android.graphics.RectF;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.BottomSheetBehavior;
@@ -8,8 +10,6 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -19,11 +19,8 @@ import com.alamkanak.weekview.MonthLoader;
 import com.alamkanak.weekview.WeekView;
 import com.alamkanak.weekview.WeekViewEvent;
 
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
-import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -33,14 +30,18 @@ public class MainActivity extends AppCompatActivity {
 
     private ActionBarDrawerToggle mDrawerToggle;
 
+    private AgendaNotificationManager notificationManager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
+
+        this.notificationManager = new AgendaNotificationManager(this);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setActionBar(toolbar);
-
 
         toolbar.setNavigationIcon(R.drawable.ic_menu_black_24dp);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -66,6 +67,9 @@ public class MainActivity extends AppCompatActivity {
 
         mWeekView = findViewById(R.id.weekView);
 
+        mWeekView.setNewEventColor(Color.GREEN);
+        mWeekView.setNewEventLengthInMinutes(60);
+
         mWeekView.setMonthChangeListener(new MonthLoader.MonthChangeListener() {
             @Override
             public List<? extends WeekViewEvent> onMonthChange(int newYear, int newMonth) {
@@ -82,6 +86,14 @@ public class MainActivity extends AppCompatActivity {
                 getActionBar().setTitle(weekTitle + " N°" + weekNum);
             }
         });
+
+        mWeekView.setOnEventClickListener(new WeekView.EventClickListener() {
+            @Override
+            public void onEventClick(WeekViewEvent event, RectF eventRect) {
+                notificationManager.displayEventNotification(event);
+            }
+        });
+
 
         LinearLayout bottomSheetViewgroup = findViewById(R.id.bottom_sheet);
         BottomSheetBehavior bottomSheetBehavior = BottomSheetBehavior.from(bottomSheetViewgroup);

@@ -61,7 +61,7 @@ public class AgendaNotificationManager {
 
         NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(context, CHANNEL_ID)
                 .setContentTitle(event.getName())
-                .setSmallIcon(R.mipmap.ic_launcher_round)
+                .setSmallIcon(R.drawable.ic_event_black_24dp)
                 .setContentText(event.getLocation())
                 .setAutoCancel(true)
                 .addAction(snoozeButton);

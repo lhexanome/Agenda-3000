@@ -37,7 +37,6 @@
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/eventStartTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
@@ -47,7 +46,6 @@
             android:textSize="24sp" />
 
         <TextView
-            android:id="@+id/bottomSheetTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"

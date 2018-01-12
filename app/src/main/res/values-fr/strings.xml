@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Agenda 3000</string>
-    <string name="title_home">Accueil</string>
     <string name="title_today">Aujourd\'hui</string>
     <string name="week_title">Semaine</string>
     <string name="notifications_button">Notifications</string>
+    <string name="bottom_sheet_content">Lorem ipsum</string>
+    <string name="bottom_sheet_title">Prochain evenement</string>
+    <string name="week_view_button">Vue semaine</string>
+    <string name="event_channel_name">Events</string>
+    <string name="snooze">Rappeler dans %d min</string>
+    <string name="event_snoozed">Rappel reporté</string>
 </resources>

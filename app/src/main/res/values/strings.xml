@@ -1,22 +1,18 @@
 <resources>
     <string name="app_name">Agenda 3000</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
-    <string name="bottom_sheet_peek">Peek me !</string>
     <string name="bottom_sheet_content">Some info about me</string>
     <string name="title_today">Today</string>
-    <string name="event_name">Réseau</string>
-    <string name="event_location">Amphi Gaston Berger</string>
-    <string name="event_start">8h00</string>
-    <string name="bottom_sheet_title">Prochain evenement</string>
-    <string name="drawer_open">Agenda\'s drawer</string>
-    <string name="drawer_close">Agenda 3000</string>
+    <string name="event_name" translatable="false">Réseau</string>
+    <string name="event_location" translatable="false">Amphi Gaston Berger</string>
+    <string name="event_start" translatable="false">8h00</string>
+    <string name="drawer_open" translatable="false">Agenda\'s drawer</string>
+    <string name="drawer_close" translatable="false">Agenda 3000</string>
     <string name="week_title">Week</string>
-    <string name="week_view_button">Vue semaine</string>
+    <string name="week_view_button">Week view</string>
     <string name="notifications_button">Notifications</string>
     <string name="event_channel_name">Events</string>
-    <string name="event_channel_description">Event channel description</string>
+    <string name="event_channel_description" translatable="false">Event channel description</string>
     <string name="snooze">Snooze %d min</string>
     <string name="event_snoozed">The event was snoozed</string>
+    <string name="bottom_sheet_title">Next event</string>
 </resources>
